@@ -3,7 +3,7 @@ name: On Push Workflow
 on:
   push:
     branches:
-      - '**'   # Runs on push to any branch
+      - '**'  # Trigger on push to any branch
 
 jobs:
   say-hello:
