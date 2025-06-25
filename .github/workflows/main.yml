@@ -1,20 +1,16 @@
-name: On Push Workflow
-
+name: Simple CI/CD-DEMO ONE
+ 
 on:
   push:
     branches:
-      - main # Trigger on push to main branch
-
+      - main
+ 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+ 
     steps:
-      - name: Print who pushed
-        run: echo "Code was pushed by ${{ github.actor }}"
-
-      - name: Print branch name
-        run: echo "Branch: ${{ github.ref }}"
-
-      - name: Print commit message
-        run: echo "Commit message: ${{ github.event.head_commit.message }}"
+      - uses: actions/checkout@v3
+ 
+      - name: Run a script
+        run: echo "Code pushed to main branch. Running CI/CD pipeline..."
