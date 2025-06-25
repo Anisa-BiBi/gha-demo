@@ -1,0 +1,25 @@
+name: On Push Workflow
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  run-on-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js (example setup)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
