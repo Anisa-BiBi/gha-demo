@@ -1,1 +1,1 @@
-# gha-demo
+# GitHub Actions demo
